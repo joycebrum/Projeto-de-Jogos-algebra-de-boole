@@ -225,135 +225,16 @@
       ]
     },
     {
-      "name": "LINE2",
-      "tags": "line",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "behaviors": [
-        {
-          "name": "Swipe",
-          "type": "Swipe::Swipe",
-          "Time": 0.2,
-          "MinLength": 100,
-          "PointStartX": 0,
-          "PointStartY": 0,
-          "PointEndX": 0,
-          "PointEndY": 0,
-          "Length": 0,
-          "DirectionX": 0,
-          "DirectionY": 0,
-          "SwipeStart": false,
-          "Angle": 0,
-          "Timer": 0,
-          "Done": false
-        }
-      ],
-      "animations": [
-        {
-          "name": "Normal",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "NewObject-1-2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0.428585,
-                        "y": 29.2857
-                      },
-                      {
-                        "x": 63.2857,
-                        "y": 29.8571
-                      },
-                      {
-                        "x": 63.5714,
-                        "y": 33
-                      },
-                      {
-                        "x": 1,
-                        "y": 34.1429
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Cut",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "NewObject-1-1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0.428585,
-                        "y": 29.2857
-                      },
-                      {
-                        "x": 63.2857,
-                        "y": 29.8571
-                      },
-                      {
-                        "x": 63.5714,
-                        "y": 33
-                      },
-                      {
-                        "x": 1,
-                        "y": 34.1429
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "LINE",
       "tags": "line",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Bit",
+          "value": ""
+        }
+      ],
       "behaviors": [
         {
           "name": "Swipe",
@@ -598,12 +479,54 @@
           "height": 64,
           "layer": "",
           "locked": false,
-          "name": "LINE2",
-          "persistentUuid": "de004e82-6ad3-48e3-9c1b-ab282e0329e5",
-          "width": 352,
-          "x": 43,
-          "y": 229,
+          "name": "LINE",
+          "persistentUuid": "3197927f-b677-4017-9e08-f5947e8ffa57",
+          "width": 246,
+          "x": 148,
+          "y": 222,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "cad6c517-fc8a-4b33-bef6-bc6c96611eb1",
+          "width": 124,
+          "x": 151,
+          "y": 261,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "e6eefd50-c755-41c8-8a33-008f8013dcc4",
+          "width": 161,
+          "x": 479,
+          "y": 245,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -612,6 +535,15 @@
       "objects": [
         {
           "name": "NewObject",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": []
+        },
+        {
+          "name": "BombTrig",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -633,39 +565,73 @@
               },
               "parameters": [
                 "LINE",
-                "",
+                "Left",
                 "",
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisBouton"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "LINE",
-                "=",
-                "1"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "LINE",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "LINE",
+                    "Bit",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "layers": [
