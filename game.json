@@ -141,6 +141,60 @@
         "name": "NewObject-1-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-2-0.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -530,6 +584,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 81,
+          "layer": "",
+          "locked": false,
+          "name": "BombTrig",
+          "persistentUuid": "1bd92ad9-6790-4ea6-9340-52eea2d958e3",
+          "width": 94,
+          "x": 632,
+          "y": 232,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -549,7 +619,54 @@
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [],
-          "animations": []
+          "animations": [
+            {
+              "name": "bomb-sprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.3,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bomb-sprite-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bomb-sprite-2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
