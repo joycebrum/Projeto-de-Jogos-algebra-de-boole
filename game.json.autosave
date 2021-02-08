@@ -240,6 +240,42 @@
         "name": "Charged-5.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Normal-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Normal-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Normal-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Normal-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Normal-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Normal-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Normal-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Normal-2-0.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -252,18 +288,14 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "name": "Bit Result",
-          "value": "0"
-        },
-        {
-          "name": "Line entries",
-          "value": "0"
+          "name": "Bit",
+          "value": "1"
         }
       ],
       "behaviors": [],
       "animations": [
         {
-          "name": "And",
+          "name": "Normal",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -272,7 +304,36 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "And-1.png",
+                  "image": "Normal-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Charged",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Normal-2-0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -666,11 +727,16 @@
           "numberProperties": [
             {
               "name": "animation",
-              "value": 2
+              "value": 0
             }
           ],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -697,13 +763,13 @@
           "name": "LINE",
           "persistentUuid": "3197927f-b677-4017-9e08-f5947e8ffa57",
           "width": 246,
-          "x": 148,
-          "y": 222,
-          "zOrder": 5,
+          "x": 150,
+          "y": 224,
+          "zOrder": 3,
           "numberProperties": [
             {
               "name": "animation",
-              "value": 2
+              "value": 0
             }
           ],
           "stringProperties": [],
@@ -749,9 +815,9 @@
           "name": "LINE",
           "persistentUuid": "e6eefd50-c755-41c8-8a33-008f8013dcc4",
           "width": 161,
-          "x": 479,
+          "x": 475,
           "y": 245,
-          "zOrder": 7,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -765,8 +831,8 @@
           "name": "BombTrig",
           "persistentUuid": "1bd92ad9-6790-4ea6-9340-52eea2d958e3",
           "width": 94,
-          "x": 632,
-          "y": 232,
+          "x": 626,
+          "y": 235,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -847,45 +913,252 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Cut Line Interactions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LINE",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "LINE",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "!=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LINE",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "Bit",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "LINE",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
           "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "LINE",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "LINE",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
+          "name": "And Door",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "disabled": false,
@@ -895,126 +1168,117 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Animation"
+                    "value": "DepartScene"
                   },
                   "parameters": [
-                    "LINE",
-                    "!=",
-                    "1"
+                    ""
                   ],
                   "subInstructions": []
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "ifelse",
-                    "=",
-                    "1"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "LINE",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "AND",
+                        "LINE",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "AND",
+                        "LINE"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LINE",
               "conditions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Animation"
+                    "value": "BuiltinCommonInstructions::And"
                   },
-                  "parameters": [
-                    "LINE",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "AND",
+                        "LINE"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "<=",
+                        "AND.X()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "Bit",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarGlobal"
+                    "value": "ModVarObjet"
                   },
                   "parameters": [
-                    "ifelse",
-                    "=",
-                    "2"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "ifelse",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "LINE",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "ifelse",
-                    "=",
-                    "2"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "LINE",
+                    "AND",
+                    "Bit",
                     "=",
                     "0"
                   ],
@@ -1022,65 +1286,81 @@
                 }
               ],
               "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "LINE",
-          "conditions": [
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::And"
-              },
-              "parameters": [],
-              "subInstructions": [
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AND",
+              "conditions": [
                 {
                   "type": {
                     "inverted": false,
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "LINE",
+                    "AND",
                     "Bit",
                     "=",
                     "1"
                   ],
                   "subInstructions": []
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Animation"
+                    "value": "ChangeAnimation"
                   },
                   "parameters": [
-                    "LINE",
+                    "AND",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AND",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "AND",
+                    "Bit",
                     "=",
                     "0"
                   ],
                   "subInstructions": []
                 }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "LINE",
-                "=",
-                "2"
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "AND",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
-          "events": []
+          "parameters": []
         }
       ],
       "layers": [
