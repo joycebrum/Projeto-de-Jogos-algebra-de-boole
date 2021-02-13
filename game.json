@@ -679,8 +679,8 @@
     {
       "b": 224,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Bomb",
-      "name": "Bomb",
+      "mangledName": "AND",
+      "name": "AND",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -750,14 +750,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 95,
+          "height": 163,
           "layer": "",
           "locked": false,
           "name": "AND",
           "persistentUuid": "cc0a0e50-e83a-41fd-b15c-50fb262e8b78",
-          "width": 89,
-          "x": 392,
-          "y": 228,
+          "width": 127,
+          "x": 394,
+          "y": 221,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -846,6 +846,32 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "3fc8da50-9c4b-4d18-af62-258480f9ef03",
+          "width": 81,
+          "x": 320,
+          "y": 302,
+          "zOrder": 3,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
         }
       ],
       "objects": [
@@ -1058,6 +1084,19 @@
                         "1"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "Bit",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -1090,6 +1129,19 @@
                         "LINE",
                         "=",
                         "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "Bit",
+                        "=",
+                        "1"
                       ],
                       "subInstructions": []
                     }
@@ -1229,72 +1281,165 @@
             {
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "LINE",
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "LinkedObjects::PickObjectsLinkedTo"
-                      },
-                      "parameters": [
-                        "",
-                        "AND",
-                        "LINE"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "LINE",
-                        "<=",
-                        "AND.X()"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "LINE",
-                        "Bit",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
+                  "parameters": [
+                    "",
+                    "AND",
+                    "LINE"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarObjet"
+                    "value": "ModVarGlobal"
                   },
                   "parameters": [
-                    "AND",
-                    "Bit",
+                    "ifelse",
                     "=",
                     "0"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "LINE",
+                            "<=",
+                            "AND.X()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "AND",
+                            "LINE",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "LINE",
+                            "Bit",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "AND",
+                            "Bit",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "AND",
+                            "Bit",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
             },
             {
               "disabled": false,
