@@ -348,6 +348,33 @@
         "name": "bomb-sprite-3-0.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e4dac018.763729001531237604896.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e4dac018.763729001531237604896.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e5114af1.2427488415312376050708.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e5114af1.2427488415312376050708.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e5114af1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e5114af1-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1047,6 +1074,10 @@
     {
       "name": "ifelse",
       "value": "0"
+    },
+    {
+      "name": "continue",
+      "value": "0"
     }
   ],
   "layouts": [
@@ -1106,7 +1137,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Cut Line Interactions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2526,7 +2557,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridB": 255,
         "gridG": 180,
         "gridHeight": 32,
@@ -2534,9 +2565,9 @@
         "gridOffsetY": 0,
         "gridR": 158,
         "gridWidth": 32,
-        "snap": true,
+        "snap": false,
         "windowMask": false,
-        "zoomFactor": 1
+        "zoomFactor": 0.5478
       },
       "objectsGroups": [],
       "variables": [],
@@ -2545,7 +2576,7 @@
           "angle": -90,
           "customSize": true,
           "height": 51,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "Fonte",
           "persistentUuid": "c3cd04d1-67ac-4f07-944a-dd738b3a2613",
@@ -2561,7 +2592,7 @@
           "angle": 0,
           "customSize": true,
           "height": 276,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "BombTrig",
           "persistentUuid": "7868bfed-fde9-48fc-bdeb-95e99fc7ea4b",
@@ -2582,7 +2613,7 @@
           "angle": 0,
           "customSize": true,
           "height": 64,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "662ca56d-b30f-4b13-8e96-0819a2a0cf1b",
@@ -2598,6 +2629,54 @@
               "value": "1"
             }
           ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Tutorial layer",
+          "locked": false,
+          "name": "TutorialText",
+          "persistentUuid": "ed9f1882-ba2e-4ab4-ad7c-f2f29f5657ee",
+          "width": 0,
+          "x": 178,
+          "y": 232,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 448,
+          "layer": "Tutorial layer",
+          "locked": false,
+          "name": "QuadroNegro",
+          "persistentUuid": "43f74f08-d8f2-4967-9fe1-42e6b6b8be95",
+          "width": 576,
+          "x": 114,
+          "y": 72,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Tutorial layer",
+          "locked": false,
+          "name": "Continuar",
+          "persistentUuid": "f94aef85-44bd-46c8-bc7b-2240455aa29c",
+          "width": 0,
+          "x": 455,
+          "y": 437,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -2718,13 +2797,71 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Bem vindo recruta",
+          "string": "Bem vindo recruta!\n\nEste é o treinamento do esquadrão anti bombas!",
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "name": "QuadroNegro",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e5114af1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "kisspng-blackboard-learn-picture-frames-rectangle-5b44d4e5114af1-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Continuar",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Clique no quadro para continue ->",
+          "font": "",
+          "characterSize": 12,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         }
       ],
@@ -2739,94 +2876,15 @@
           "target": "Global events"
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "LINE",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "BombTrig",
-                    "LINE",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "LinkedObjects::LinkObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "BombTrig",
-                    "LINE"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "LinkedObjects::PickObjectsLinkedTo"
-              },
-              "parameters": [
-                "",
-                "BombTrig",
-                "LINE"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "ifelse",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "name": "text tutorial",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "disabled": false,
@@ -2836,22 +2894,158 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "DepartScene"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "LINE",
-                        "<=",
-                        "BombTrig.X()"
-                      ],
-                      "subInstructions": []
-                    },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "QuadroNegro",
+                    "",
+                    "no",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Tutorial layer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "Bomb dinamyc",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "LINE",
+                  "conditions": [
                     {
                       "type": {
                         "inverted": false,
@@ -2866,10 +3060,57 @@
                       ],
                       "subInstructions": []
                     }
-                  ]
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "BombTrig",
+                        "LINE"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "BombTrig",
+                    "LINE"
+                  ],
+                  "subInstructions": []
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "ifelse",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": [
                 {
                   "disabled": false,
@@ -2879,156 +3120,202 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "VarObjet"
+                        "value": "BuiltinCommonInstructions::And"
                       },
-                      "parameters": [
-                        "LINE",
-                        "Bit",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "LINE",
+                            "<=",
+                            "BombTrig.X()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "BombTrig",
+                            "LINE",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "ifelse",
-                        "=",
-                        "1"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "LINE",
+                            "Bit",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "BombTrig",
+                            "Bit",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     },
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "BombTrig",
-                        "Bit",
-                        "=",
-                        "0"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarGlobal"
-                      },
-                      "parameters": [
-                        "ifelse",
-                        "=",
-                        "0"
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "BombTrig",
+                            "Bit",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "events": []
                     }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "BombTrig",
-                        "Bit",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "BombTrig",
-          "conditions": [
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "VarObjet"
-              },
-              "parameters": [
-                "BombTrig",
-                "Bit",
-                "=",
-                "1"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "BombTrig",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "BombTrig",
+                    "Bit",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "BombTrig",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "BombTrig",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "BombTrig",
+                    "Bit",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "BombTrig",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "BombTrig",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "BombTrig",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarObjet"
-              },
-              "parameters": [
-                "BombTrig",
-                "Bit",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "BombTrig",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
+          "parameters": []
         },
         {
           "disabled": false,
@@ -3130,20 +3417,18 @@
               "width": 0
             }
           ],
-          "effects": [
-            {
-              "effectType": "Blur",
-              "name": "Effect",
-              "doubleParameters": {
-                "blur": 8,
-                "kernelSize": 5,
-                "quality": 1,
-                "resolution": 2
-              },
-              "stringParameters": {},
-              "booleanParameters": {}
-            }
-          ]
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 8183904,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Game Layer",
+          "visibility": false,
+          "cameras": [],
+          "effects": []
         },
         {
           "ambientLightColorB": 1702453580,
@@ -3151,7 +3436,7 @@
           "ambientLightColorR": 16,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "name": "Tutorial Layer",
+          "name": "Tutorial layer",
           "visibility": true,
           "cameras": [],
           "effects": []
