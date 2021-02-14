@@ -270,12 +270,66 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "Fontedeligada-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Fontedeligada-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Fonte-2-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Fonte-2-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Terra-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Terra-1-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "depositphotos_40547589-stock-illustration-funky-cartoon-bomb-ready-to.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "depositphotos_40547589-stock-illustration-funky-cartoon-bomb-ready-to.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
         "file": "bomb-sprite-1.png",
         "kind": "image",
         "metadata": "",
         "name": "bomb-sprite-1.png",
         "smoothed": true,
-        "userAdded": false
+        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -284,7 +338,16 @@
         "metadata": "",
         "name": "bomb-sprite-2.png",
         "smoothed": true,
-        "userAdded": false
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-3-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-3-0.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -382,6 +445,232 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "NewObject-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LINEV",
+      "tags": "line",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Bit",
+          "value": ""
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Swipe",
+          "type": "Swipe::Swipe",
+          "Time": 0.2,
+          "MinLength": 100,
+          "PointStartX": 0,
+          "PointStartY": 0,
+          "PointEndX": 0,
+          "PointEndY": 0,
+          "Length": 0,
+          "DirectionX": 0,
+          "DirectionY": 0,
+          "SwipeStart": false,
+          "Angle": 0,
+          "Timer": 0,
+          "Done": false
+        }
+      ],
+      "animations": [
+        {
+          "name": "Normal",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewObject-1-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.428585,
+                        "y": 29.2857
+                      },
+                      {
+                        "x": 63.2857,
+                        "y": 29.8571
+                      },
+                      {
+                        "x": 63.5714,
+                        "y": 33
+                      },
+                      {
+                        "x": 1,
+                        "y": 34.1429
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cut",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewObject-1-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0.428585,
+                        "y": 29.2857
+                      },
+                      {
+                        "x": 63.2857,
+                        "y": 29.8571
+                      },
+                      {
+                        "x": 63.5714,
+                        "y": 33
+                      },
+                      {
+                        "x": 1,
+                        "y": 34.1429
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Charged",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Charged-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Charged-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Charged-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Charged-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Charged-5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -666,6 +955,91 @@
           ]
         }
       ]
+    },
+    {
+      "name": "BombTrig",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "bomba ligada",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.3,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "bomb-sprite-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "bomb-sprite-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "bomba desligada",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "bomb-sprite-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsGroups": [],
@@ -679,8 +1053,8 @@
     {
       "b": 224,
       "disableInputWhenNotFocused": true,
-      "mangledName": "AND_32Tutorial",
-      "name": "AND Tutorial",
+      "mangledName": "Global_32events",
+      "name": "Global events",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -704,176 +1078,7 @@
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "NOT",
-          "persistentUuid": "5bb76938-b586-41b7-bd1f-f11eca85ada3",
-          "width": 0,
-          "x": 267,
-          "y": 261,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 64,
-          "layer": "",
-          "locked": false,
-          "name": "LINE",
-          "persistentUuid": "5348aec1-2842-4636-9a5d-19c8aa1c5ea7",
-          "width": 81,
-          "x": 314,
-          "y": 260,
-          "zOrder": 3,
-          "numberProperties": [
-            {
-              "name": "animation",
-              "value": 0
-            }
-          ],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Bit",
-              "value": "1"
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 163,
-          "layer": "",
-          "locked": false,
-          "name": "AND",
-          "persistentUuid": "cc0a0e50-e83a-41fd-b15c-50fb262e8b78",
-          "width": 127,
-          "x": 394,
-          "y": 221,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 64,
-          "layer": "",
-          "locked": false,
-          "name": "LINE",
-          "persistentUuid": "3197927f-b677-4017-9e08-f5947e8ffa57",
-          "width": 246,
-          "x": 150,
-          "y": 224,
-          "zOrder": 3,
-          "numberProperties": [
-            {
-              "name": "animation",
-              "value": 0
-            }
-          ],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Bit",
-              "value": "1"
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 64,
-          "layer": "",
-          "locked": false,
-          "name": "LINE",
-          "persistentUuid": "cad6c517-fc8a-4b33-bef6-bc6c96611eb1",
-          "width": 124,
-          "x": 151,
-          "y": 261,
-          "zOrder": 6,
-          "numberProperties": [
-            {
-              "name": "animation",
-              "value": 0
-            }
-          ],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Bit",
-              "value": "0"
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 64,
-          "layer": "",
-          "locked": false,
-          "name": "LINE",
-          "persistentUuid": "e6eefd50-c755-41c8-8a33-008f8013dcc4",
-          "width": 161,
-          "x": 475,
-          "y": 245,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 81,
-          "layer": "",
-          "locked": false,
-          "name": "BombTrig",
-          "persistentUuid": "1bd92ad9-6790-4ea6-9340-52eea2d958e3",
-          "width": 94,
-          "x": 626,
-          "y": 235,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 64,
-          "layer": "",
-          "locked": false,
-          "name": "LINE",
-          "persistentUuid": "3fc8da50-9c4b-4d18-af62-258480f9ef03",
-          "width": 81,
-          "x": 320,
-          "y": 302,
-          "zOrder": 3,
-          "numberProperties": [
-            {
-              "name": "animation",
-              "value": 0
-            }
-          ],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Bit",
-              "value": "1"
-            }
-          ]
-        }
-      ],
+      "instances": [],
       "objects": [
         {
           "name": "NewObject",
@@ -885,60 +1090,13 @@
           "animations": []
         },
         {
-          "name": "BombTrig",
+          "name": "NewObject2",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [],
-          "animations": [
-            {
-              "name": "bomb-sprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.3,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "bomb-sprite-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "bomb-sprite-2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "animations": []
         }
       ],
       "events": [
@@ -1209,6 +1367,257 @@
             }
           ],
           "parameters": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 36,
+          "ambientLightColorG": 7131120,
+          "ambientLightColorR": 32,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Swipe",
+          "type": "Swipe::Swipe"
+        }
+      ]
+    },
+    {
+      "b": 224,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "AND_32Tutorial",
+      "name": "AND Tutorial",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 214,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 213,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.94
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "NOT",
+          "persistentUuid": "5bb76938-b586-41b7-bd1f-f11eca85ada3",
+          "width": 0,
+          "x": 267,
+          "y": 261,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "5348aec1-2842-4636-9a5d-19c8aa1c5ea7",
+          "width": 81,
+          "x": 314,
+          "y": 260,
+          "zOrder": 3,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 163,
+          "layer": "",
+          "locked": false,
+          "name": "AND",
+          "persistentUuid": "cc0a0e50-e83a-41fd-b15c-50fb262e8b78",
+          "width": 127,
+          "x": 394,
+          "y": 221,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "3197927f-b677-4017-9e08-f5947e8ffa57",
+          "width": 246,
+          "x": 150,
+          "y": 224,
+          "zOrder": 3,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "cad6c517-fc8a-4b33-bef6-bc6c96611eb1",
+          "width": 124,
+          "x": 151,
+          "y": 261,
+          "zOrder": 6,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "e6eefd50-c755-41c8-8a33-008f8013dcc4",
+          "width": 161,
+          "x": 475,
+          "y": 245,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 81,
+          "layer": "",
+          "locked": false,
+          "name": "BombTrig",
+          "persistentUuid": "1bd92ad9-6790-4ea6-9340-52eea2d958e3",
+          "width": 94,
+          "x": 626,
+          "y": 235,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "3fc8da50-9c4b-4d18-af62-258480f9ef03",
+          "width": 81,
+          "x": 320,
+          "y": 302,
+          "zOrder": 3,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "name": "NewObject",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Global events"
         },
         {
           "colorB": 228,
@@ -1216,7 +1625,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "And Door",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1795,7 +2204,7 @@
           "include": {
             "includeConfig": 0
           },
-          "target": "AND Tutorial"
+          "target": "Global events"
         },
         {
           "colorB": 228,
@@ -2093,6 +2502,658 @@
               "width": 0
             }
           ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Swipe",
+          "type": "Swipe::Swipe"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Binary_32tutorial",
+      "name": "Binary tutorial",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": true,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": -90,
+          "customSize": true,
+          "height": 51,
+          "layer": "",
+          "locked": false,
+          "name": "Fonte",
+          "persistentUuid": "c3cd04d1-67ac-4f07-944a-dd738b3a2613",
+          "width": 133,
+          "x": 58,
+          "y": 228,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 276,
+          "layer": "",
+          "locked": false,
+          "name": "BombTrig",
+          "persistentUuid": "7868bfed-fde9-48fc-bdeb-95e99fc7ea4b",
+          "width": 276,
+          "x": 529,
+          "y": 116,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "662ca56d-b30f-4b13-8e96-0819a2a0cf1b",
+          "width": 412,
+          "x": 142,
+          "y": 226,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "name": "Fonte",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Fonte desligada",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Fontedeligada-1-0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Fonte ligada",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Fonte-2-1-0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Terra",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Terra-1-0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "TutorialText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Bem vindo recruta",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Global events"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LINE",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "BombTrig",
+                    "LINE",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "BombTrig",
+                    "LINE"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "BombTrig",
+                "LINE"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "ifelse",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "<=",
+                        "BombTrig.X()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "BombTrig",
+                        "LINE",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "Bit",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "BombTrig",
+                        "Bit",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "BombTrig",
+                        "Bit",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "BombTrig",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "BombTrig",
+                "Bit",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "BombTrig",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "BombTrig",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "BombTrig",
+                "Bit",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "BombTrig",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 649296,
+          "ambientLightColorG": 1214,
+          "ambientLightColorR": 7282520,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            },
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Blur",
+              "name": "Effect",
+              "doubleParameters": {
+                "blur": 8,
+                "kernelSize": 5,
+                "quality": 1,
+                "resolution": 2
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 1333224782,
+          "ambientLightColorR": 16,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Tutorial Layer",
+          "visibility": true,
+          "cameras": [],
           "effects": []
         }
       ],
