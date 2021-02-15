@@ -324,24 +324,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "bomb-sprite-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "bomb-sprite-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "bomb-sprite-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "bomb-sprite-2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "bomb-sprite-3-0.png",
         "kind": "image",
         "metadata": "",
@@ -454,6 +436,24 @@
         "kind": "image",
         "metadata": "",
         "name": "Normal-1-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bomb-sprite-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bomb-sprite-2.png",
         "smoothed": true,
         "userAdded": true
       }
@@ -947,7 +947,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "bomba ligada",
+          "name": "bombaligada",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1563,22 +1563,6 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 83,
-          "layer": "",
-          "locked": false,
-          "name": "Bomb",
-          "persistentUuid": "c88d88d7-0836-436c-8877-39ead10f774b",
-          "width": 86,
-          "x": 611,
-          "y": 186,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 17,
           "layer": "",
           "locked": false,
@@ -1630,6 +1614,22 @@
           "x": 504,
           "y": 222,
           "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 123,
+          "layer": "",
+          "locked": false,
+          "name": "BombTrig",
+          "persistentUuid": "bfa8b06c-9012-454d-8dad-76ed94605af3",
+          "width": 125,
+          "x": 595,
+          "y": 161,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2390,7 +2390,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "text tutorial",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2647,7 +2647,7 @@
   ],
   "externalEvents": [
     {
-      "associatedLayout": "Global events",
+      "associatedLayout": "AND Tutorial",
       "lastChangeTimeStamp": 0,
       "name": "Stage Rules",
       "events": [
@@ -2932,7 +2932,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2989,7 +2989,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2999,8 +2999,8 @@
                   },
                   "parameters": [
                     "",
-                    "BombTrig",
-                    "LINE"
+                    "LINE",
+                    "BombTrig"
                   ],
                   "subInstructions": []
                 }
