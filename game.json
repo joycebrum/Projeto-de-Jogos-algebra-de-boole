@@ -2806,13 +2806,13 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 72,
           "layer": "Tutorial layer",
           "locked": false,
           "name": "TutorialText",
           "persistentUuid": "ed9f1882-ba2e-4ab4-ad7c-f2f29f5657ee",
-          "width": 0,
+          "width": 830,
           "x": 178,
           "y": 232,
           "zOrder": 8,
@@ -2829,8 +2829,8 @@
           "name": "QuadroNegro",
           "persistentUuid": "43f74f08-d8f2-4967-9fe1-42e6b6b8be95",
           "width": 576,
-          "x": 114,
-          "y": 72,
+          "x": 485,
+          "y": 105,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -2856,7 +2856,7 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "0bcdfbb0-2949-474d-9dbd-b3400b43aa2f",
@@ -2992,7 +2992,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Bem vindo recruta!\n\nEste é o treinamento do esquadrão anti bombas!",
+          "string": "Bem vindo recruta!\n\nEste é o treinamento do esquadrão anti bombas! M M M M M M M M M M M M M M M M M M M",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -3109,6 +3109,127 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "QuadroNegro",
+                    "=",
+                    "(SceneWindowWidth() * 2)/3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "QuadroNegro",
+                    "=",
+                    "(SceneWindowHeight() * 2)/3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "QuadroNegro",
+                    "=",
+                    "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
+                    "=",
+                    "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "TutorialText",
+                    "=",
+                    "QuadroNegro.X() + 64",
+                    "=",
+                    "QuadroNegro.Y() + 64"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::WrappingWidth"
+                  },
+                  "parameters": [
+                    "TutorialText",
+                    "=",
+                    "QuadroNegro.Width()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::SetWrapping"
+                  },
+                  "parameters": [
+                    "TutorialText",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::WrappingWidth"
+                  },
+                  "parameters": [
+                    "TutorialText",
+                    "=",
+                    "QuadroNegro.Width() - 128"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Continuar",
+                    "=",
+                    "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
+                    "=",
+                    "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -3151,7 +3272,7 @@
                   },
                   "parameters": [
                     "continue",
-                    "=",
+                    "+",
                     "1"
                   ],
                   "subInstructions": []
@@ -3173,6 +3294,40 @@
                     "continue",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TutorialText",
+                    "=",
+                    "\"Vamos começar pelo básico\n\nPrimeiro vamos começar com uma bomba aliemntada. Voce verá que ela está ligada em uma pilha, para desativar, bastar cortar o fio.\n\nAh e não se preocupe, as bombas do treinamento são todas de mentirinha ;)\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "2"
                   ],
                   "subInstructions": []
                 }
@@ -3307,7 +3462,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Game Layer",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         },
@@ -3318,7 +3473,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Tutorial layer",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         }
