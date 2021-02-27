@@ -2279,10 +2279,6 @@
             {
               "name": "Bit",
               "value": "0"
-            },
-            {
-              "name": "V",
-              "value": "1"
             }
           ]
         },
@@ -2304,10 +2300,6 @@
             {
               "name": "Bit",
               "value": "1"
-            },
-            {
-              "name": "V",
-              "value": "2"
             }
           ]
         },
@@ -2328,10 +2320,6 @@
           "initialVariables": [
             {
               "name": "Bit",
-              "value": "1"
-            },
-            {
-              "name": "V",
               "value": "1"
             }
           ]
@@ -2371,46 +2359,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 94,
+          "height": 102,
           "layer": "",
           "locked": false,
           "name": "Timer",
-          "persistentUuid": "e38b23c8-2393-49c0-ac6c-63d4ec68b2bc",
+          "persistentUuid": "637b49a4-837c-4ae6-abe1-741d08e43103",
           "width": 102,
-          "x": 374.703,
-          "y": 72.0296,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 94,
-          "layer": "",
-          "locked": false,
-          "name": "Timer",
-          "persistentUuid": "87140833-b314-4337-91a0-dd459f4403ae",
-          "width": 102,
-          "x": 299.705,
-          "y": 75.1542,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 110,
-          "layer": "",
-          "locked": false,
-          "name": "Clock",
-          "persistentUuid": "306e29f1-2c49-4133-969d-bec3795e380a",
-          "width": 110,
-          "x": 349,
-          "y": 20,
+          "x": 399,
+          "y": 18,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -2514,7 +2470,7 @@
           ]
         },
         {
-          "name": "Clock",
+          "name": "Timer",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -2522,7 +2478,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "clock2",
               "useMultipleDirections": false,
               "directions": [
                 {
