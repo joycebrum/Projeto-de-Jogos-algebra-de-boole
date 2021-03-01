@@ -672,6 +672,10 @@
         {
           "name": "Bit",
           "value": ""
+        },
+        {
+          "name": "Cuttable",
+          "value": "1"
         }
       ],
       "behaviors": [
@@ -1249,7 +1253,12 @@
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "Cuttable",
+              "value": "0"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -1348,7 +1357,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "And Door Entries",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1422,7 +1431,7 @@
                   },
                   "parameters": [
                     "",
-                    "AND",
+                    "OR",
                     "LINE"
                   ],
                   "subInstructions": []
@@ -1577,7 +1586,7 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::ForEach",
-              "object": "AND",
+              "object": "OR",
               "conditions": [
                 {
                   "type": {
@@ -1585,7 +1594,7 @@
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "AND",
+                    "OR",
                     "Bit",
                     "=",
                     "1"
@@ -1600,7 +1609,7 @@
                     "value": "ChangeAnimation"
                   },
                   "parameters": [
-                    "AND",
+                    "OR",
                     "=",
                     "1"
                   ],
@@ -1613,7 +1622,7 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::ForEach",
-              "object": "AND",
+              "object": "OR",
               "conditions": [
                 {
                   "type": {
@@ -1621,7 +1630,7 @@
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "AND",
+                    "OR",
                     "Bit",
                     "=",
                     "0"
@@ -1636,7 +1645,7 @@
                     "value": "ChangeAnimation"
                   },
                   "parameters": [
-                    "AND",
+                    "OR",
                     "=",
                     "0"
                   ],
@@ -5297,6 +5306,19 @@
                   "parameters": [
                     "",
                     "Left"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "LINE",
+                    "Cuttable",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
