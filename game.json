@@ -1460,6 +1460,45 @@
         "g": 99,
         "r": 18
       }
+    },
+    {
+      "name": "XOR",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "XOR.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsGroups": [],
@@ -1474,6 +1513,10 @@
     },
     {
       "name": "actualTutorial",
+      "value": "0"
+    },
+    {
+      "name": "isVictory",
       "value": "0"
     }
   ],
@@ -1502,7 +1545,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5
+        "zoomFactor": 0.74
       },
       "objectsGroups": [],
       "variables": [],
@@ -1516,8 +1559,8 @@
           "name": "Continuar",
           "persistentUuid": "9b3d6d01-f894-4732-aa7d-68b6eff65dba",
           "width": 0,
-          "x": 446,
-          "y": 328,
+          "x": 465,
+          "y": 342,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -1532,8 +1575,8 @@
           "name": "TutorialText",
           "persistentUuid": "99d556c9-b346-40c1-8e0c-28facb4e062e",
           "width": 0,
-          "x": 360,
-          "y": 205,
+          "x": 379,
+          "y": 219,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -1548,8 +1591,8 @@
           "name": "QuadroNegro",
           "persistentUuid": "efe4a30a-55f9-4690-9d9c-3df0d6dc0875",
           "width": 0,
-          "x": 56,
-          "y": 10,
+          "x": 90,
+          "y": 24,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1564,8 +1607,8 @@
           "name": "Instructor",
           "persistentUuid": "219bf1e3-37af-4128-8a85-65ee08e5ad69",
           "width": 297,
-          "x": -54,
-          "y": 137,
+          "x": -52,
+          "y": 207,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -1749,7 +1792,7 @@
               "events": [
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2069,7 +2112,7 @@
                           "parameters": [
                             "TutorialText",
                             "=",
-                            "\"Vamos começar pelo básico\n\nPrimeiro vamos começar com uma bomba aliemntada. Voce verá que ela está ligada em uma pilha, para desativar, bastar cortar o fio.\n\nAh e não se preocupe, as bombas do treinamento são todas de mentirinha ;)\""
+                            "\"Vamos começar pelo básico\n\nPrimeiro vamos começar com uma bomba alimentada. Voce verá que ela está ligada em uma pilha, para desativar, bastar cortar o fio.\n\nAh e não se preocupe, as bombas do treinamento são todas de mentirinha ;)\""
                           ],
                           "subInstructions": []
                         }
@@ -2126,7 +2169,7 @@
                 },
                 {
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2475,24 +2518,24 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "Scene"
+                            "value": "ModVarGlobal"
                           },
                           "parameters": [
-                            "",
-                            "\"Binary tutorial2\"",
-                            ""
+                            "actualTutorial",
+                            "=",
+                            "2"
                           ],
                           "subInstructions": []
                         },
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
+                            "value": "Scene"
                           },
                           "parameters": [
-                            "actualTutorial",
-                            "=",
-                            "1"
+                            "",
+                            "\"Binary tutorial2\"",
+                            ""
                           ],
                           "subInstructions": []
                         }
@@ -2510,14 +2553,14 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Tutorial And",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2866,6 +2909,18 @@
                         {
                           "type": {
                             "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "actualTutorial",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
                             "value": "Scene"
                           },
                           "parameters": [
@@ -2907,7 +2962,7 @@
                       "parameters": [
                         "actualTutorial",
                         "=",
-                        "2"
+                        "3"
                       ],
                       "subInstructions": []
                     }
@@ -3182,7 +3237,7 @@
                           "parameters": [
                             "TutorialText",
                             "=",
-                            "\"Texto tutorial de OR\""
+                            "\"Muito bom, sabia que você iria passar nesse desafio sem problemas, mas agora vamos para outra porta que surge para dificultar um pouco seu trabalho.\""
                           ],
                           "subInstructions": []
                         }
@@ -3216,7 +3271,7 @@
                           "parameters": [
                             "TutorialText",
                             "=",
-                            "\"Texto tutorial de Or 2\""
+                            "\"A porta lógica OR, ao contrário da porta AND, deixa a energia passar quando qualquer um dos fios que estão conectados a ela estão ligados. Somente quando não houver nenhum fio ligado era deixará de passar energia.\""
                           ],
                           "subInstructions": []
                         }
@@ -3242,6 +3297,18 @@
                         }
                       ],
                       "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "actualTutorial",
+                            "=",
+                            "4"
+                          ],
+                          "subInstructions": []
+                        },
                         {
                           "type": {
                             "inverted": false,
@@ -3275,7 +3342,7 @@
               "events": [
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -3286,7 +3353,7 @@
                       "parameters": [
                         "actualTutorial",
                         "=",
-                        "3"
+                        "4"
                       ],
                       "subInstructions": []
                     }
@@ -3624,6 +3691,18 @@
                         {
                           "type": {
                             "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "actualTutorial",
+                            "=",
+                            "5"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
                             "value": "Scene"
                           },
                           "parameters": [
@@ -3640,17 +3719,408 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": false,
+              "name": "Tutorial XOR",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "actualTutorial",
+                        "=",
+                        "5"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Configurando tamanho e posição do quadro",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "DepartScene"
+                          },
+                          "parameters": [
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeWidth"
+                          },
+                          "parameters": [
+                            "QuadroNegro",
+                            "=",
+                            "(SceneWindowWidth() * 2)/3"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeHeight"
+                          },
+                          "parameters": [
+                            "QuadroNegro",
+                            "=",
+                            "(SceneWindowHeight() * 2)/3"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "QuadroNegro",
+                            "=",
+                            "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
+                            "=",
+                            "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Configurando tamanho e posição dos textos",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "DepartScene"
+                          },
+                          "parameters": [
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "Continuar",
+                            "=",
+                            "\"Clique no quadro para continuar ->\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "TutorialText",
+                            "=",
+                            "QuadroNegro.X() + 64",
+                            "=",
+                            "QuadroNegro.Y() + 64"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::WrappingWidth"
+                          },
+                          "parameters": [
+                            "TutorialText",
+                            "=",
+                            "QuadroNegro.Width()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::SetWrapping"
+                          },
+                          "parameters": [
+                            "TutorialText",
+                            "yes"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::WrappingWidth"
+                          },
+                          "parameters": [
+                            "TutorialText",
+                            "=",
+                            "QuadroNegro.Width() - 128"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "Continuar",
+                            "=",
+                            "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
+                            "=",
+                            "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "QuadroNegro",
+                            "",
+                            "no",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "continue",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TutorialText",
+                            "=",
+                            "\"Parabéns recruta! Poucos passam por esses testes tão rápido quanto você, tenho altas expectativas. Mas agora vem o seu teste final, antes de você poder entrar em campo.\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TutorialText",
+                            "=",
+                            "\"A porta logica XOR, o ou exclusivo, liga somente quando as entradas são alternadas. Isso significa que, quando os dois fios estão ligados ou desligados, a porta estará desligada, porém quando um esta ligado e o outro desligado a porta XOR estará ligada.\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "actualTutorial",
+                            "=",
+                            "6"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"XOR\"",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ],
       "layers": [
@@ -3717,7 +4187,7 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "15dae33c-2dca-43a7-a6ce-615e696847dc",
@@ -3738,7 +4208,7 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "561eed51-a694-47f7-9ef4-1d84debe7c39",
@@ -3759,7 +4229,7 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "45a2d64d-da68-4698-ba44-0f2fc9082cca",
@@ -3771,6 +4241,10 @@
           "stringProperties": [],
           "initialVariables": [
             {
+              "name": "Bit",
+              "value": "1"
+            },
+            {
               "name": "Cuttable",
               "value": "0"
             }
@@ -3780,7 +4254,7 @@
           "angle": 0,
           "customSize": true,
           "height": 104,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "BombTrig",
           "persistentUuid": "b736c242-070b-4114-86bf-b6fcda7fcf8c",
@@ -3795,24 +4269,8 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 94,
-          "layer": "",
-          "locked": false,
-          "name": "Timer",
-          "persistentUuid": "ca1c0d4d-d4a6-43f7-9cb5-448a0d19372e",
-          "width": 102,
-          "x": 342,
-          "y": 50,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 115,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "OR",
           "persistentUuid": "5d13cd04-f672-471a-b7e6-34bc0e75e655",
@@ -3823,49 +4281,25 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        }
-      ],
-      "objects": [
+        },
         {
-          "name": "Timer",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "clock2",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "clock2-1-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Text Layer",
+          "locked": false,
+          "name": "Sucesso",
+          "persistentUuid": "690de8eb-9901-4647-92b1-3f056669b0cd",
+          "width": 0,
+          "x": 293,
+          "y": 267,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
+      "objects": [],
       "events": [
         {
           "colorB": 228,
@@ -4214,6 +4648,28 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Game Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Text Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -4256,7 +4712,7 @@
           "angle": 0,
           "customSize": true,
           "height": 115,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "AND",
           "persistentUuid": "cc0a0e50-e83a-41fd-b15c-50fb262e8b78",
@@ -4272,7 +4728,7 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "15dae33c-2dca-43a7-a6ce-615e696847dc",
@@ -4293,7 +4749,7 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "561eed51-a694-47f7-9ef4-1d84debe7c39",
@@ -4307,6 +4763,10 @@
             {
               "name": "Bit",
               "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "1"
             }
           ]
         },
@@ -4314,29 +4774,38 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "45a2d64d-da68-4698-ba44-0f2fc9082cca",
           "width": 122,
-          "x": 497,
-          "y": 295,
+          "x": 494,
+          "y": 289,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
+            }
+          ]
         },
         {
           "angle": 0,
           "customSize": true,
           "height": 104,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "BombTrig",
           "persistentUuid": "b736c242-070b-4114-86bf-b6fcda7fcf8c",
           "width": 118,
-          "x": 588,
-          "y": 248,
+          "x": 583,
+          "y": 240,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -4344,62 +4813,22 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 94,
-          "layer": "",
+          "customSize": false,
+          "height": 0,
+          "layer": "Text Layer",
           "locked": false,
-          "name": "Timer",
-          "persistentUuid": "ca1c0d4d-d4a6-43f7-9cb5-448a0d19372e",
-          "width": 102,
-          "x": 342,
-          "y": 50,
+          "name": "Sucesso",
+          "persistentUuid": "17fe9296-124b-4591-a905-ae1115ed1bc2",
+          "width": 0,
+          "x": 316,
+          "y": 261,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
-      "objects": [
-        {
-          "name": "Timer",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "clock2",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "clock2-1-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
+      "objects": [],
       "events": [
         {
           "colorB": 228,
@@ -4748,6 +5177,28 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Game Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Text Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -4781,7 +5232,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.88
+        "zoomFactor": 0.76
       },
       "objectsGroups": [],
       "variables": [],
@@ -4790,13 +5241,13 @@
           "angle": 0,
           "customSize": true,
           "height": 107,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "XOR",
           "persistentUuid": "81273035-2e90-4a2d-8df2-cacc586e4ec3",
           "width": 156,
-          "x": 372,
-          "y": 178,
+          "x": 320,
+          "y": 236,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -4811,13 +5262,13 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "6619c2b0-d992-4bf2-8b1d-04db028dd0cd",
           "width": 209,
-          "x": 196,
-          "y": 196,
+          "x": 144,
+          "y": 254,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4832,13 +5283,13 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "0ca3d9bd-8587-4c2f-af2c-04c98e35d4a5",
           "width": 214,
-          "x": 195,
-          "y": 235,
+          "x": 143,
+          "y": 293,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4853,29 +5304,38 @@
           "angle": 0,
           "customSize": true,
           "height": 17,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "LINE",
           "persistentUuid": "577e7d7b-4a06-4e10-94c3-1acc7c665263",
           "width": 124,
-          "x": 504,
-          "y": 222,
+          "x": 453,
+          "y": 275,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
+            }
+          ]
         },
         {
           "angle": 0,
           "customSize": true,
           "height": 123,
-          "layer": "",
+          "layer": "Game Layer",
           "locked": false,
           "name": "BombTrig",
           "persistentUuid": "bfa8b06c-9012-454d-8dad-76ed94605af3",
           "width": 125,
-          "x": 595,
-          "y": 161,
+          "x": 543,
+          "y": 219,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -4883,157 +5343,22 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 102,
-          "layer": "",
+          "customSize": false,
+          "height": 0,
+          "layer": "Text Layer",
           "locked": false,
-          "name": "Timer",
-          "persistentUuid": "637b49a4-837c-4ae6-abe1-741d08e43103",
-          "width": 102,
-          "x": 399,
-          "y": 18,
-          "zOrder": 7,
+          "name": "Sucesso",
+          "persistentUuid": "cea94f5e-2fa5-4f69-a986-8486ac53aee0",
+          "width": 0,
+          "x": 312,
+          "y": 250,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
-      "objects": [
-        {
-          "name": "XOR",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "XOR.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Bomb",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "bomb-sprite-1",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.18,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "bomb-sprite-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "bomb-sprite-2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Timer",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "clock2",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "clock2-1-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
+      "objects": [],
       "events": [
         {
           "disabled": false,
@@ -5512,6 +5837,28 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Game Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Text Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -5617,13 +5964,13 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "Text Layer",
           "locked": false,
           "name": "Sucesso",
           "persistentUuid": "e3cc782e-4f9a-419b-b864-3d4968b2e092",
           "width": 0,
-          "x": 313,
-          "y": 80,
+          "x": 307,
+          "y": 266,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -5927,6 +6274,17 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Game Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 117440512,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Text Layer",
           "visibility": true,
           "cameras": [],
           "effects": []
@@ -5998,7 +6356,12 @@
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -6025,13 +6388,13 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "Text Layer",
           "locked": false,
           "name": "Sucesso",
           "persistentUuid": "5c70b99c-1b35-4a45-a069-34bc3536572b",
           "width": 0,
-          "x": 304,
-          "y": 94,
+          "x": 303,
+          "y": 265,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -6338,6 +6701,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 1701016960,
+          "ambientLightColorR": 117440512,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Text Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -6367,7 +6741,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6385,21 +6759,23 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Cache"
+                    "value": "HideLayer"
                   },
                   "parameters": [
-                    "Sucesso"
+                    "",
+                    "\"Text Layer\""
                   ],
                   "subInstructions": []
                 },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetTimer"
+                    "value": "ModVarGlobal"
                   },
                   "parameters": [
-                    "",
-                    "\"WaitTimer\""
+                    "isVictory",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -6441,6 +6817,166 @@
                     }
                   ],
                   "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "LINE",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "BombTrig2",
+                        "LINE",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "BombTrig2",
+                        "LINE"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "isVictory",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"WaitTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"WaitTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "isVictory",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Tutorial board\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"WaitTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Text Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "HideLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ]
             }
@@ -6453,7 +6989,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Cut Line Interactions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6798,7 +7334,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6962,78 +7498,6 @@
             {
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "BombTrig",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "BombTrig",
-                    "Bit",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "BombTrig",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "BombTrig",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "BombTrig",
-                    "Bit",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "BombTrig",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7054,11 +7518,24 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Montre"
+                    "value": "ChangeAnimation"
                   },
                   "parameters": [
-                    "Sucesso",
-                    ""
+                    "BombTrig",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "isVictory",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 },
@@ -7074,60 +7551,41 @@
                   "subInstructions": []
                 }
               ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Timer"
-                      },
-                      "parameters": [
-                        "",
-                        "2",
-                        "\"WaitTimer\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PauseTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"WaitTimer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Tutorial board\"",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
+              "events": []
             },
             {
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "BombTrig",
+                    "Bit",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "BombTrig",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": []
             }
           ],
@@ -7146,7 +7604,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7179,7 +7637,7 @@
               "events": [
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7197,7 +7655,7 @@
                           "parameters": [
                             "LINE",
                             "<=",
-                            "BombTrig.X()"
+                            "BombTrig2.X()"
                           ],
                           "subInstructions": []
                         },
@@ -7234,7 +7692,7 @@
                             "LINE",
                             "Bit",
                             "=",
-                            "0"
+                            "1"
                           ],
                           "subInstructions": []
                         }
@@ -7258,10 +7716,10 @@
                             "value": "ModVarObjet"
                           },
                           "parameters": [
-                            "BombTrig",
+                            "BombTrig2",
                             "Bit",
                             "=",
-                            "0\n"
+                            "1"
                           ],
                           "subInstructions": []
                         }
@@ -7293,10 +7751,10 @@
                             "value": "ModVarObjet"
                           },
                           "parameters": [
-                            "BombTrig",
+                            "BombTrig2",
                             "Bit",
                             "=",
-                            "1\n"
+                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -7310,8 +7768,7 @@
             {
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "BombTrig",
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -7337,42 +7794,6 @@
                     "BombTrig2",
                     "=",
                     "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "BombTrig",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "BombTrig2",
-                    "Bit",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "BombTrig2",
-                    "=",
-                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -7402,11 +7823,24 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Montre"
+                    "value": "ChangeAnimation"
                   },
                   "parameters": [
-                    "Sucesso",
-                    ""
+                    "BombTrig2",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "isVictory",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 },
@@ -7422,53 +7856,7 @@
                   "subInstructions": []
                 }
               ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Timer"
-                      },
-                      "parameters": [
-                        "",
-                        "2",
-                        "\"WaitTimer\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PauseTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"WaitTimer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Tutorial board\"",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
+              "events": []
             }
           ],
           "parameters": []
