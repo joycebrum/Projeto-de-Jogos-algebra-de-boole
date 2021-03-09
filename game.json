@@ -645,6 +645,24 @@
         "name": "time-bomb-sprite-8.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "XOR-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "XOR-1-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "XOR-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "XOR-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1479,7 +1497,36 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "XOR.png",
+                  "image": "XOR-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "XOR-1-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
