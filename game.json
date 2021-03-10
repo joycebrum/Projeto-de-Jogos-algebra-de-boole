@@ -1546,6 +1546,44 @@
           ]
         }
       ]
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "Fracasso",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Fracasso",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 27,
+        "g": 2,
+        "r": 208
+      }
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "CutsCounter",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Cortes/Ligações: 1",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "objectsGroups": [],
@@ -1565,6 +1603,14 @@
     {
       "name": "isVictory",
       "value": "0"
+    },
+    {
+      "name": "cuts",
+      "value": "1"
+    },
+    {
+      "name": "startingCuts",
+      "value": "1"
     }
   ],
   "layouts": [
@@ -4344,10 +4390,58 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Fail Layer",
+          "locked": false,
+          "name": "Fracasso",
+          "persistentUuid": "8682a1c2-a7f3-4896-844b-5cabd69758b3",
+          "width": 0,
+          "x": 287,
+          "y": 267,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "startingCuts",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "disabled": false,
           "folded": false,
@@ -4408,6 +4502,17 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Text Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 8930200,
+          "ambientLightColorR": 1,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fail Layer",
           "visibility": true,
           "cameras": [],
           "effects": []
@@ -4567,6 +4672,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Fail Layer",
+          "locked": false,
+          "name": "Fracasso",
+          "persistentUuid": "f2ad01ec-40ef-404f-abab-b25626c384a6",
+          "width": 0,
+          "x": 311,
+          "y": 261,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -4631,6 +4752,17 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Text Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fail Layer",
           "visibility": true,
           "cameras": [],
           "effects": []
@@ -4788,6 +4920,22 @@
           "x": 312,
           "y": 250,
           "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Fail Layer",
+          "locked": false,
+          "name": "Fracasso",
+          "persistentUuid": "8b6611a8-0aa7-4d20-b3b8-ed5ed369c87f",
+          "width": 0,
+          "x": 308,
+          "y": 250,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5294,6 +5442,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fail Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -5407,6 +5566,22 @@
           "x": 307,
           "y": 266,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Fail Layer",
+          "locked": false,
+          "name": "Fracasso",
+          "persistentUuid": "a32fc4cd-8ba7-4c91-a040-b1a2581ef1ee",
+          "width": 0,
+          "x": 301,
+          "y": 267,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5723,6 +5898,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fail Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -5831,6 +6017,22 @@
           "x": 303,
           "y": 265,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Fail Layer",
+          "locked": false,
+          "name": "Fracasso",
+          "persistentUuid": "c1938e99-f68e-4465-a82d-fb394bdd590e",
+          "width": 0,
+          "x": 295,
+          "y": 264,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6147,6 +6349,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fail Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -6199,6 +6412,17 @@
                   "parameters": [
                     "",
                     "\"Text Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Fail Layer\""
                   ],
                   "subInstructions": []
                 },
@@ -6424,7 +6648,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Cut Line Interactions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6473,7 +6697,32 @@
                   "subInstructions": []
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "cuts",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "CutsCounter",
+                    "=",
+                    "\"Cortes/Ligações: \" + GlobalVariableString(cuts)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": [
                 {
                   "disabled": false,
@@ -8477,6 +8726,208 @@
           "conditions": [],
           "actions": [],
           "events": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "OR Tutorial",
+      "lastChangeTimeStamp": 0,
+      "name": "Lose Rules",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Cut Counter",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "cuts",
+                    "=",
+                    "GlobalVariable(startingCuts)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "CutsCounter",
+                    "=",
+                    "\"Cortes/Ligações: \" + GlobalVariableString(cuts)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "cuts",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "isVictory",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "LINE",
+                    "Cuttable",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"WaitTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Fail Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "HideLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"WaitTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"WaitTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "CurrentSceneName()",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ]
     }
