@@ -1927,12 +1927,253 @@
           "events": []
         },
         {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Configurando tamanho e posição do quadro",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "continue",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "QuadroNegro",
+                "=",
+                "(SceneWindowWidth() * 2)/3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeHeight"
+              },
+              "parameters": [
+                "QuadroNegro",
+                "=",
+                "(SceneWindowHeight() * 2)/3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "QuadroNegro",
+                "=",
+                "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
+                "=",
+                "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Configurando tamanho e posição dos textos",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Continuar",
+                "=",
+                "\"Clique no quadro para continuar ->\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "TutorialText",
+                "=",
+                "QuadroNegro.X() + 64",
+                "=",
+                "QuadroNegro.Y() + 64"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::WrappingWidth"
+              },
+              "parameters": [
+                "TutorialText",
+                "=",
+                "QuadroNegro.Width()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::SetWrapping"
+              },
+              "parameters": [
+                "TutorialText",
+                "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::WrappingWidth"
+              },
+              "parameters": [
+                "TutorialText",
+                "=",
+                "QuadroNegro.Width() - 128"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Continuar",
+                "=",
+                "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
+                "=",
+                "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "QuadroNegro",
+                "",
+                "no",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "continue",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Tutorial board",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1968,247 +2209,6 @@
                   ],
                   "actions": [],
                   "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição do quadro",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeWidth"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeHeight"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowHeight() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
-                            "=",
-                            "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição dos textos",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "\"Clique no quadro para continuar ->\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.X() + 64",
-                            "=",
-                            "QuadroNegro.Y() + 64"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::SetWrapping"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "yes"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width() - 128"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
-                            "=",
-                            "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "",
-                            "no",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
                     {
                       "disabled": false,
                       "folded": false,
@@ -2307,18 +2307,6 @@
                             ""
                           ],
                           "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "actualTutorial",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
                         }
                       ],
                       "events": []
@@ -2327,7 +2315,7 @@
                 },
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2345,247 +2333,6 @@
                   ],
                   "actions": [],
                   "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição do quadro",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeWidth"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeHeight"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowHeight() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
-                            "=",
-                            "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição dos textos",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "\"Clique no quadro para continuar ->\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.X() + 64",
-                            "=",
-                            "QuadroNegro.Y() + 64"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::SetWrapping"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "yes"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width() - 128"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
-                            "=",
-                            "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "",
-                            "no",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
                     {
                       "disabled": false,
                       "folded": false,
@@ -2676,18 +2423,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "actualTutorial",
-                            "=",
-                            "2"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "Scene"
                           },
                           "parameters": [
@@ -2711,7 +2446,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Tutorial And",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2736,247 +2471,6 @@
                   ],
                   "actions": [],
                   "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição do quadro",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeWidth"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeHeight"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowHeight() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
-                            "=",
-                            "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição dos textos",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "\"Clique no quadro para continuar ->\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.X() + 64",
-                            "=",
-                            "QuadroNegro.Y() + 64"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::SetWrapping"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "yes"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width() - 128"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
-                            "=",
-                            "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "",
-                            "no",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
                     {
                       "disabled": false,
                       "folded": false,
@@ -3067,18 +2561,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "actualTutorial",
-                            "=",
-                            "3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "Scene"
                           },
                           "parameters": [
@@ -3127,247 +2609,6 @@
                   ],
                   "actions": [],
                   "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição do quadro",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeWidth"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeHeight"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowHeight() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
-                            "=",
-                            "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição dos textos",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "\"Clique no quadro para continuar ->\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.X() + 64",
-                            "=",
-                            "QuadroNegro.Y() + 64"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::SetWrapping"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "yes"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width() - 128"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
-                            "=",
-                            "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "",
-                            "no",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
                     {
                       "disabled": false,
                       "folded": false,
@@ -3458,18 +2699,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "actualTutorial",
-                            "=",
-                            "4"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "Scene"
                           },
                           "parameters": [
@@ -3518,247 +2747,6 @@
                   ],
                   "actions": [],
                   "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição do quadro",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeWidth"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeHeight"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowHeight() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
-                            "=",
-                            "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição dos textos",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "\"Clique no quadro para continuar ->\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.X() + 64",
-                            "=",
-                            "QuadroNegro.Y() + 64"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::SetWrapping"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "yes"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width() - 128"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
-                            "=",
-                            "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "",
-                            "no",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
                     {
                       "disabled": false,
                       "folded": false,
@@ -3849,18 +2837,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "actualTutorial",
-                            "=",
-                            "5"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "Scene"
                           },
                           "parameters": [
@@ -3909,247 +2885,6 @@
                   ],
                   "actions": [],
                   "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição do quadro",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeWidth"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangeHeight"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowHeight() * 2)/3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "=",
-                            "(SceneWindowWidth() / 2) - (QuadroNegro.Width()/2)",
-                            "=",
-                            "(SceneWindowHeight() / 2) - (QuadroNegro.Height()/2)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Configurando tamanho e posição dos textos",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "DepartScene"
-                          },
-                          "parameters": [
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "\"Clique no quadro para continuar ->\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.X() + 64",
-                            "=",
-                            "QuadroNegro.Y() + 64"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::SetWrapping"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "yes"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::WrappingWidth"
-                          },
-                          "parameters": [
-                            "TutorialText",
-                            "=",
-                            "QuadroNegro.Width() - 128"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "Continuar",
-                            "=",
-                            "QuadroNegro.X() + QuadroNegro.Width() - Continuar.Width() - 64",
-                            "=",
-                            "QuadroNegro.Y() + QuadroNegro.Height() - Continuar.Height() - 48"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "QuadroNegro",
-                            "",
-                            "no",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "continue",
-                            "+",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
                     {
                       "disabled": false,
                       "folded": false,
@@ -4240,18 +2975,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "actualTutorial",
-                            "=",
-                            "6"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "Scene"
                           },
                           "parameters": [
@@ -4279,6 +3002,130 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "actualTutorial",
+                "=",
+                "6"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TutorialText",
+                    "=",
+                    "\"Agora você finalmente recebeu sua licença como menbro da Anti Bomb Squad! Bem vindo, recruta!\n\nAgora sua responsabilidade é muito maior. Desarmar uma bomba é salvar vidas. Errar é perder vidas, inclusive a sua. Tome muito cuidado.\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TutorialText",
+                    "=",
+                    "\"No momento você é apenas um desarmador iniciante mas, conforme for ganhando mais experiência, pode subir de cargo. Quem sabe você não vira o próximo Mestre do Desarmamento de Bombas do esquadrão? Tenho altas expectativas em você, recruta!\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Stage1\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         }
       ],
       "layers": [
@@ -6541,7 +5388,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.79
+        "zoomFactor": 0.76
       },
       "objectsGroups": [],
       "variables": [],
@@ -6606,6 +5453,22 @@
           "x": 301,
           "y": 353,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 302,
+          "layer": "",
+          "locked": false,
+          "name": "Professor",
+          "persistentUuid": "222f1b61-3837-4f67-8120-26b72129fd3b",
+          "width": 213,
+          "x": -1,
+          "y": 296,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6727,6 +5590,79 @@
             "g": 0,
             "r": 128
           }
+        },
+        {
+          "name": "Professor",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.15,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "2_police_attack_Attack1_007.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "2_police_attack_Attack1_008.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "2_police_attack_Attack1_009.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -6994,6 +5930,68 @@
           "type": "Swipe::Swipe"
         }
       ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Stage1",
+      "name": "Stage1",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 649296,
+          "ambientLightColorG": 1214,
+          "ambientLightColorR": 7155816,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Swipe",
+          "type": "Swipe::Swipe"
+        }
+      ]
     }
   ],
   "externalEvents": [
@@ -7212,6 +6210,18 @@
                         "isVictory",
                         "=",
                         "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "actualTutorial",
+                        "+",
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -8181,6 +7191,14 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ]
     },
