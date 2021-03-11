@@ -2774,7 +2774,7 @@
                           "parameters": [
                             "TutorialText",
                             "=",
-                            "\"Texto tutorial de Not\""
+                            "\"Parabéns Recruta! Mas agora as coisas vão começar a ficar complexas.\n\nTe ensinarei agora sobre a porta NOT.\""
                           ],
                           "subInstructions": []
                         }
@@ -2808,7 +2808,7 @@
                           "parameters": [
                             "TutorialText",
                             "=",
-                            "\"Texto tutorial de Not 2\""
+                            "\"Seu funcionamento é simples, mas sua visualização pode ser complexa.\n\nCaso tenha energia na entrada da porta, na saida não haverá energia, caso não tenha energia na entrada, haverá na saída.\n\nPode parecer estranho surgir energia com o fio cortado, mas isso é apenas para facilitar a visualização, na verdade existe uma alimentação interna para essas portas ;)\""
                           ],
                           "subInstructions": []
                         }
@@ -2841,7 +2841,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"Binary tutorial\"",
+                            "\"Not tutorial\"",
                             ""
                           ],
                           "subInstructions": []
