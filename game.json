@@ -697,6 +697,82 @@
         "name": "assets\\Closebutton-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/speak-balloon-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\speak-balloon-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/speak-balloon-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\speak-balloon-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/bubble.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\bubble.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/bubble-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\bubble-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/user-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\user-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/user-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\user-1-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Start button.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Start button.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Flat Dark/Start button.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Startbutton-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Startbutton-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1725,6 +1801,195 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Professor",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.15,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "2_police_attack_Attack1_007.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "2_police_attack_Attack1_008.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "2_police_attack_Attack1_009.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "user",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\user-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Continuar",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Continuar",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "name": "UserBack",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Startbutton",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Startbutton-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Cargo",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Recruta",
+      "font": "Fontes\\zorque\\zorque.ttf",
+      "characterSize": 30,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "objectsGroups": [],
@@ -1760,6 +2025,10 @@
     {
       "name": "nextStage",
       "value": "Stage1"
+    },
+    {
+      "name": "cargo",
+      "value": "Recruta"
     }
   ],
   "layouts": [
@@ -1858,25 +2127,6 @@
         }
       ],
       "objects": [
-        {
-          "bold": false,
-          "italic": false,
-          "name": "Continuar",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "continue\n",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          }
-        },
         {
           "bold": false,
           "italic": false,
@@ -3254,6 +3504,15 @@
               "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -3524,6 +3783,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -3799,6 +4067,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -4092,6 +4369,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -4503,6 +4789,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -5030,6 +5325,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -5399,6 +5703,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -5573,8 +5886,8 @@
           "name": "Title",
           "persistentUuid": "924d4a9a-b88d-4334-a7e5-9549d4ec74d0",
           "width": 0,
-          "x": 151,
-          "y": 57,
+          "x": 162,
+          "y": 134,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -5589,8 +5902,8 @@
           "name": "StartButton",
           "persistentUuid": "2c7d1965-6ea3-4f8f-a399-5de33b548f11",
           "width": 297,
-          "x": 221,
-          "y": 339,
+          "x": 254,
+          "y": 384,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -5605,8 +5918,8 @@
           "name": "Exit",
           "persistentUuid": "036da0e8-4def-4d71-82fd-d0fe15b44f06",
           "width": 0,
-          "x": 36,
-          "y": 31,
+          "x": 701,
+          "y": 15,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -5621,8 +5934,8 @@
           "name": "StartText",
           "persistentUuid": "4d72fae0-562a-47cd-bff8-14beda504583",
           "width": 0,
-          "x": 301,
-          "y": 353,
+          "x": 333,
+          "y": 396,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -5761,79 +6074,6 @@
             "g": 0,
             "r": 128
           }
-        },
-        {
-          "name": "Professor",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.15,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "2_police_attack_Attack1_007.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "2_police_attack_Attack1_008.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "2_police_attack_Attack1_009.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "events": [
@@ -6069,6 +6309,15 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -6206,6 +6455,10 @@
             {
               "name": "Bit",
               "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
             }
           ]
         },
@@ -6345,8 +6598,8 @@
           "name": "CutsCounter",
           "persistentUuid": "a7fdda21-b4e3-45d0-86ef-d576b099e55d",
           "width": 0,
-          "x": 187,
-          "y": 66,
+          "x": 211,
+          "y": 90,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -6450,6 +6703,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -6636,6 +6898,10 @@
             {
               "name": "Bit",
               "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
             }
           ]
         },
@@ -6864,6 +7130,15 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
         }
       ],
       "layers": [
@@ -6931,18 +7206,18 @@
       ]
     },
     {
-      "b": 209,
+      "b": 62,
       "disableInputWhenNotFocused": true,
       "mangledName": "After_32Stage",
       "name": "After Stage",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
-      "r": 209,
+      "r": 250,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 209,
+      "v": 180,
       "uiSettings": {
         "grid": false,
         "gridB": 255,
@@ -6954,13 +7229,329 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1
+        "zoomFactor": 0.79
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
-      "objects": [],
-      "events": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 435,
+          "layer": "",
+          "locked": false,
+          "name": "Professor",
+          "persistentUuid": "a1a7837f-f775-4062-86d2-e83ee6354a63",
+          "width": 297,
+          "x": 68,
+          "y": 169,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 181,
+          "layer": "",
+          "locked": false,
+          "name": "Speak",
+          "persistentUuid": "836b6109-3c69-40f5-994a-61f6342646b5",
+          "width": 288,
+          "x": 355,
+          "y": 51,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 329,
+          "layer": "",
+          "locked": false,
+          "name": "Bubble",
+          "persistentUuid": "08a9cb85-6110-46dd-a1a2-99f53d690098",
+          "width": 352,
+          "x": 321,
+          "y": 12,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 49,
+          "layer": "",
+          "locked": false,
+          "name": "Continue",
+          "persistentUuid": "bdae90bf-34c7-4e34-93d0-5f3125e2140e",
+          "width": 151,
+          "x": 592,
+          "y": 517,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ContinueText",
+          "persistentUuid": "ac2ec665-2e63-4294-bddc-996ff04f8495",
+          "width": 0,
+          "x": 609,
+          "y": 530,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "NewObject",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": []
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Speak",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "name": "Bubble",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "bubble",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\bubble-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Startbutton",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Startbutton-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "ContinueText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Continuar",
+          "font": "Fontes\\zorque\\zorque.ttf",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 255,
+            "r": 255
+          }
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneBackground"
+              },
+              "parameters": [
+                "",
+                "\"250;180;62\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Speak",
+                "=",
+                "\"Parabéns, você conseguiu desarmar a bomba com sucesso! Você está cada vez mais próximo de se tornar um Mestre do desarmamento\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Continue",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "GlobalVariableString(nextStage)",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 0,
@@ -10681,6 +11272,111 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
+          "events": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "After Stage",
+      "lastChangeTimeStamp": 0,
+      "name": "User",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "User",
+                "22",
+                "10",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Cargo",
+                "95",
+                "30",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "UserBack",
+                "30",
+                "16",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "UserBack",
+                "=",
+                "209"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeHeight"
+              },
+              "parameters": [
+                "UserBack",
+                "=",
+                "61"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Cargo",
+                "=",
+                "GlobalVariableString(cargo)"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         }
       ]
