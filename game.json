@@ -1756,6 +1756,10 @@
     {
       "name": "nextScene",
       "value": "Tutorial board"
+    },
+    {
+      "name": "nextStage",
+      "value": "Stage1"
     }
   ],
   "layouts": [
@@ -3132,7 +3136,20 @@
               "subInstructions": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nextScene",
+                "=",
+                "\"After Stage\""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": [
             {
               "disabled": false,
@@ -3294,7 +3311,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.88
+        "zoomFactor": 0.58
       },
       "objectsGroups": [],
       "variables": [],
@@ -3429,6 +3446,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "22f7a548-90d9-4313-a8a1-ac378f23ad0e",
+          "width": 0,
+          "x": 169,
+          "y": 105,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -3482,6 +3515,15 @@
             "includeConfig": 0
           },
           "target": "OR Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
         }
       ],
       "layers": [
@@ -3711,6 +3753,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "153ce060-dd1e-44fa-8ec6-2c0fd1b1afba",
+          "width": 0,
+          "x": 168,
+          "y": 122,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
@@ -3732,6 +3790,15 @@
             "includeConfig": 0
           },
           "target": "And Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
         }
       ],
       "layers": [
@@ -3836,8 +3903,8 @@
           "name": "XOR",
           "persistentUuid": "81273035-2e90-4a2d-8df2-cacc586e4ec3",
           "width": 156,
-          "x": 320,
-          "y": 236,
+          "x": 305,
+          "y": 283,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -3857,8 +3924,8 @@
           "name": "LINE",
           "persistentUuid": "6619c2b0-d992-4bf2-8b1d-04db028dd0cd",
           "width": 209,
-          "x": 144,
-          "y": 254,
+          "x": 129,
+          "y": 301,
           "zOrder": 1,
           "numberProperties": [
             {
@@ -3891,8 +3958,8 @@
           "name": "LINE",
           "persistentUuid": "0ca3d9bd-8587-4c2f-af2c-04c98e35d4a5",
           "width": 214,
-          "x": 143,
-          "y": 293,
+          "x": 128,
+          "y": 340,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -3916,8 +3983,8 @@
           "name": "LINE",
           "persistentUuid": "577e7d7b-4a06-4e10-94c3-1acc7c665263",
           "width": 124,
-          "x": 453,
-          "y": 275,
+          "x": 438,
+          "y": 322,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -3941,8 +4008,8 @@
           "name": "BombTrig",
           "persistentUuid": "bfa8b06c-9012-454d-8dad-76ed94605af3",
           "width": 125,
-          "x": 543,
-          "y": 219,
+          "x": 528,
+          "y": 266,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -3958,7 +4025,7 @@
           "persistentUuid": "cea94f5e-2fa5-4f69-a986-8486ac53aee0",
           "width": 0,
           "x": 312,
-          "y": 250,
+          "y": 257,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -3973,9 +4040,25 @@
           "name": "Fracasso",
           "persistentUuid": "8b6611a8-0aa7-4d20-b3b8-ed5ed369c87f",
           "width": 0,
-          "x": 308,
-          "y": 250,
+          "x": 301,
+          "y": 257,
           "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "5c7f5294-dbf1-455a-80c5-4bff8c9f185c",
+          "width": 0,
+          "x": 202,
+          "y": 106,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4000,6 +4083,15 @@
             "includeConfig": 0
           },
           "target": "XOR Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
         }
       ],
       "layers": [
@@ -4090,7 +4182,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.8178
+        "zoomFactor": 0.7578
       },
       "objectsGroups": [],
       "variables": [],
@@ -4104,8 +4196,8 @@
           "name": "Fonte",
           "persistentUuid": "c3cd04d1-67ac-4f07-944a-dd738b3a2613",
           "width": 133,
-          "x": 58,
-          "y": 228,
+          "x": 63,
+          "y": 322,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4120,8 +4212,8 @@
           "name": "LINE",
           "persistentUuid": "0bcdfbb0-2949-474d-9dbd-b3400b43aa2f",
           "width": 505,
-          "x": 127,
-          "y": 253,
+          "x": 132,
+          "y": 347,
           "zOrder": 2,
           "numberProperties": [
             {
@@ -4146,8 +4238,8 @@
           "name": "BombTrig2",
           "persistentUuid": "4c10bc1b-cc70-48c6-bf99-3dc190d554e3",
           "width": 160,
-          "x": 572,
-          "y": 180,
+          "x": 577,
+          "y": 274,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -4167,8 +4259,8 @@
           "name": "Sucesso",
           "persistentUuid": "e3cc782e-4f9a-419b-b864-3d4968b2e092",
           "width": 0,
-          "x": 307,
-          "y": 266,
+          "x": 323,
+          "y": 262,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -4183,9 +4275,25 @@
           "name": "Fracasso",
           "persistentUuid": "a32fc4cd-8ba7-4c91-a040-b1a2581ef1ee",
           "width": 0,
-          "x": 301,
-          "y": 267,
+          "x": 310,
+          "y": 261,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "cd9d937e-1b60-4658-aa31-1b0cd2479118",
+          "width": 0,
+          "x": 189,
+          "y": 101,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4386,6 +4494,15 @@
             "includeConfig": 0
           },
           "target": "Stage Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
         }
       ],
       "layers": [
@@ -4546,7 +4663,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 1.6478
+        "zoomFactor": 0.7778
       },
       "objectsGroups": [],
       "variables": [],
@@ -4560,8 +4677,8 @@
           "name": "Fonte",
           "persistentUuid": "c3cd04d1-67ac-4f07-944a-dd738b3a2613",
           "width": 133,
-          "x": 58,
-          "y": 228,
+          "x": 85,
+          "y": 299,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4576,8 +4693,8 @@
           "name": "BombTrig",
           "persistentUuid": "7868bfed-fde9-48fc-bdeb-95e99fc7ea4b",
           "width": 148,
-          "x": 531,
-          "y": 185,
+          "x": 565,
+          "y": 259,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -4597,8 +4714,8 @@
           "name": "LINE",
           "persistentUuid": "0bcdfbb0-2949-474d-9dbd-b3400b43aa2f",
           "width": 179,
-          "x": 128,
-          "y": 254,
+          "x": 162,
+          "y": 328,
           "zOrder": 2,
           "numberProperties": [
             {
@@ -4655,8 +4772,8 @@
           "name": "NOT",
           "persistentUuid": "455b2d80-0330-4062-8a69-ef7d9a67726f",
           "width": 0,
-          "x": 299,
-          "y": 229,
+          "x": 333,
+          "y": 303,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -4671,8 +4788,8 @@
           "name": "LINE",
           "persistentUuid": "671d9aad-86a7-4be0-a11c-ba10ea2dba72",
           "width": 203,
-          "x": 345,
-          "y": 252,
+          "x": 379,
+          "y": 326,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -4682,6 +4799,22 @@
               "value": "1"
             }
           ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "0cc2049f-939a-4909-a96a-6e4ba98eeec3",
+          "width": 0,
+          "x": 176,
+          "y": 110,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -4888,6 +5021,15 @@
             "includeConfig": 0
           },
           "target": "NOT Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
         }
       ],
       "layers": [
@@ -5001,7 +5143,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Text Layer",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         },
@@ -5012,7 +5154,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fail Layer",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         }
@@ -5048,7 +5190,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.5478
+        "zoomFactor": 0.5178
       },
       "objectsGroups": [],
       "variables": [],
@@ -5062,8 +5204,8 @@
           "name": "Fonte",
           "persistentUuid": "c3cd04d1-67ac-4f07-944a-dd738b3a2613",
           "width": 133,
-          "x": 58,
-          "y": 228,
+          "x": 83,
+          "y": 310,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -5078,8 +5220,8 @@
           "name": "BombTrig",
           "persistentUuid": "7868bfed-fde9-48fc-bdeb-95e99fc7ea4b",
           "width": 148,
-          "x": 520,
-          "y": 188,
+          "x": 548,
+          "y": 261,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -5099,8 +5241,8 @@
           "name": "LINE",
           "persistentUuid": "0bcdfbb0-2949-474d-9dbd-b3400b43aa2f",
           "width": 455,
-          "x": 127,
-          "y": 253,
+          "x": 155,
+          "y": 326,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -5120,8 +5262,8 @@
           "name": "Sucesso",
           "persistentUuid": "5c70b99c-1b35-4a45-a069-34bc3536572b",
           "width": 0,
-          "x": 303,
-          "y": 265,
+          "x": 321,
+          "y": 255,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -5136,9 +5278,25 @@
           "name": "Fracasso",
           "persistentUuid": "c1938e99-f68e-4465-a82d-fb394bdd590e",
           "width": 0,
-          "x": 295,
-          "y": 264,
+          "x": 310,
+          "y": 255,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "05a4fa46-526d-48b3-8dc9-2b41edaf83d4",
+          "width": 0,
+          "x": 183,
+          "y": 108,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5232,6 +5390,15 @@
             "includeConfig": 0
           },
           "target": "Stage Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
         }
       ],
       "layers": [
@@ -5959,7 +6126,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.76
+        "zoomFactor": 0.61
       },
       "objectsGroups": [],
       "variables": [],
@@ -6147,7 +6314,7 @@
           "persistentUuid": "c7447cf7-13a7-42ea-978a-58ff7756eb9c",
           "width": 0,
           "x": 302,
-          "y": 282,
+          "y": 260,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -6162,8 +6329,8 @@
           "name": "Sucesso",
           "persistentUuid": "95c7e6db-8cc9-4a3e-ad03-1e7512580da8",
           "width": 0,
-          "x": 314,
-          "y": 283,
+          "x": 315,
+          "y": 261,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -6230,6 +6397,18 @@
                 "startingCuts",
                 "=",
                 "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nextStage",
+                "=",
+                "\"Stage3\""
               ],
               "subInstructions": []
             }
@@ -6303,7 +6482,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Text Layer",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         },
@@ -6325,7 +6504,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fail Layer",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         }
@@ -6626,12 +6805,24 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarGlobal"
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nextStage",
+                "=",
+                "\"Stage2\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobalTxt"
               },
               "parameters": [
                 "nextScene",
                 "=",
-                "Stage2"
+                "\"After Stage\""
               ],
               "subInstructions": []
             }
@@ -6729,6 +6920,68 @@
           "name": "Fail Layer",
           "visibility": true,
           "cameras": [],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Swipe",
+          "type": "Swipe::Swipe"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "After_32Stage",
+      "name": "After Stage",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 0,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
           "effects": []
         }
       ],
@@ -8736,6 +8989,28 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "AND",
+                    "Bit",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -8744,8 +9019,8 @@
                   },
                   "parameters": [
                     "",
-                    "AND",
-                    "LINE"
+                    "LINE",
+                    "AND"
                   ],
                   "subInstructions": []
                 }
@@ -8855,41 +9130,6 @@
                         }
                       ],
                       "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "ifelse",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarObjet"
-                          },
-                          "parameters": [
-                            "AND",
-                            "Bit",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
                     }
                   ]
                 }
@@ -8993,8 +9233,8 @@
                   },
                   "parameters": [
                     "",
-                    "AND",
-                    "LINE"
+                    "LINE",
+                    "AND"
                   ],
                   "subInstructions": []
                 }
