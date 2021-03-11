@@ -1610,7 +1610,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "Cortes/Ligações: 1",
+      "string": "Cortes/Ligações: ",
       "font": "",
       "characterSize": 40,
       "color": {
@@ -1752,6 +1752,10 @@
     {
       "name": "startingCuts",
       "value": "1"
+    },
+    {
+      "name": "nextScene",
+      "value": "Tutorial board"
     }
   ],
   "layouts": [
@@ -5934,6 +5938,408 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
+      "mangledName": "Stage2",
+      "name": "Stage2",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.76
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 129,
+          "layer": "",
+          "locked": false,
+          "name": "BombTrig",
+          "persistentUuid": "c6a54deb-54c4-44c2-a3ea-5078d7950c41",
+          "width": 131,
+          "x": 626,
+          "y": 233,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "b4b6be5c-374b-463d-b052-2f0627b229ed",
+          "width": 184,
+          "x": 468,
+          "y": 298,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 174,
+          "layer": "",
+          "locked": false,
+          "name": "OR",
+          "persistentUuid": "a880bdaf-bd0b-4e3f-a433-5d60242c5776",
+          "width": 158,
+          "x": 330,
+          "y": 216,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "95202cb0-a569-462c-8dd6-e32e4f07422e",
+          "width": 137,
+          "x": 233,
+          "y": 259,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": -90,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Fonte",
+          "persistentUuid": "cd383e4a-1a6b-42e7-ac36-fe66574d1657",
+          "width": 0,
+          "x": -24,
+          "y": 249,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "773a808e-4f8a-4f36-8ad9-5cfd7d7f60c8",
+          "width": 114,
+          "x": 34,
+          "y": 236,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "0f32e9ef-4a18-436c-a590-02e8b4bf94a4",
+          "width": 121,
+          "x": 28,
+          "y": 281,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": -90,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Fonte",
+          "persistentUuid": "a880a3d1-85bc-4029-8fdb-6a44937e8db7",
+          "width": 0,
+          "x": -26,
+          "y": 357,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "052fd08f-46bc-4298-900e-c91d9c0ba52c",
+          "width": 335,
+          "x": 32,
+          "y": 341,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Fail Layer",
+          "locked": false,
+          "name": "Fracasso",
+          "persistentUuid": "c7447cf7-13a7-42ea-978a-58ff7756eb9c",
+          "width": 0,
+          "x": 302,
+          "y": 282,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Text Layer",
+          "locked": false,
+          "name": "Sucesso",
+          "persistentUuid": "95c7e6db-8cc9-4a3e-ad03-1e7512580da8",
+          "width": 0,
+          "x": 314,
+          "y": 283,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "a7fdda21-b4e3-45d0-86ef-d576b099e55d",
+          "width": 0,
+          "x": 187,
+          "y": 66,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 102,
+          "layer": "",
+          "locked": false,
+          "name": "AND",
+          "persistentUuid": "7dd0319a-17da-49ba-842f-522c974a44e1",
+          "width": 107,
+          "x": 139,
+          "y": 212,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "startingCuts",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Stage Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "And Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "OR Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 649296,
+          "ambientLightColorG": 1214,
+          "ambientLightColorR": 7155816,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 6009760,
+          "ambientLightColorR": 33554432,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Text Layer",
+          "visibility": false,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 1954047360,
+          "ambientLightColorR": 33554432,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Game Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fail Layer",
+          "visibility": false,
+          "cameras": [],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Swipe",
+          "type": "Swipe::Swipe"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
       "mangledName": "Stage1",
       "name": "Stage1",
       "oglFOV": 90,
@@ -6010,6 +6416,10 @@
             {
               "name": "Bit",
               "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
             }
           ]
         },
@@ -6176,10 +6586,58 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "a7fdda21-b4e3-45d0-86ef-d576b099e55d",
+          "width": 0,
+          "x": 187,
+          "y": 66,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "nextScene",
+                "=",
+                "Stage2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "disabled": false,
           "folded": false,
@@ -6241,7 +6699,7 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 6009760,
           "ambientLightColorR": 33554432,
           "followBaseLayerCamera": false,
@@ -6252,8 +6710,8 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
-          "ambientLightColorG": 1954047316,
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 1954047360,
           "ambientLightColorR": 33554432,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
@@ -6263,7 +6721,7 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 0,
           "ambientLightColorR": 2,
           "followBaseLayerCamera": false,
@@ -6360,6 +6818,28 @@
                     "\"250;180;62\""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeLayer"
+                  },
+                  "parameters": [
+                    "Sucesso",
+                    "\"Text Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeLayer"
+                  },
+                  "parameters": [
+                    "Fracasso",
+                    "\"Fail Layer\""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": [
@@ -6431,6 +6911,216 @@
                         "",
                         "BombTrig2",
                         "LINE"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "AND",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "AND",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "NOT",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "NOT",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "LINE",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "LINE",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "OR",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "OR",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "BombTrig",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "BombTrig",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "BombTrig2",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "BombTrig2",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "CutsCounter",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "CutsCounter",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "XOR",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "XOR",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Fonte",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "Fonte",
+                        "\"Game Layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Terra",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeLayer"
+                      },
+                      "parameters": [
+                        "Terra",
+                        "\"Game Layer\""
                       ],
                       "subInstructions": []
                     }
@@ -6520,7 +7210,7 @@
                       },
                       "parameters": [
                         "",
-                        "\"Tutorial board\"",
+                        "GlobalVariableString(nextScene)",
                         ""
                       ],
                       "subInstructions": []
@@ -6583,7 +7273,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Cut Line Interactions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9164,6 +9854,17 @@
                     "\"Cortes/Ligações: \" + GlobalVariableString(cuts)"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Fail Layer\""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -9176,26 +9877,35 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "VarGlobal"
+                    "value": "BuiltinCommonInstructions::And"
                   },
-                  "parameters": [
-                    "cuts",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "isVictory",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "cuts",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "isVictory",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
                 }
               ],
               "actions": [
@@ -9209,6 +9919,17 @@
                     "Cuttable",
                     "=",
                     "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "UnPauseTimer"
+                  },
+                  "parameters": [
+                    "\"",
+                    "\"FailTimer\""
                   ],
                   "subInstructions": []
                 }
@@ -9227,7 +9948,7 @@
                       "parameters": [
                         "",
                         "1",
-                        "\"WaitTimer\""
+                        "\"FailTimer\""
                       ],
                       "subInstructions": []
                     }
@@ -9271,7 +9992,7 @@
                       "parameters": [
                         "",
                         "2",
-                        "\"WaitTimer\""
+                        "\"FailTimer\""
                       ],
                       "subInstructions": []
                     }
@@ -9284,7 +10005,7 @@
                       },
                       "parameters": [
                         "",
-                        "\"WaitTimer\""
+                        "\"FailTimer\""
                       ],
                       "subInstructions": []
                     },
