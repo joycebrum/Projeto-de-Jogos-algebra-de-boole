@@ -647,24 +647,6 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "XOR-1-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "XOR-1-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "XOR-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "XOR-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
         "file": "Fontes/zorque/zorque.ttf",
         "kind": "font",
         "metadata": "",
@@ -773,6 +755,24 @@
         "name": "assets\\Startbutton-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "XOR-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "XOR-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "XOR-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "XOR-1-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1598,7 +1598,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "XOR-1",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1627,7 +1627,7 @@
           ]
         },
         {
-          "name": "",
+          "name": "XOR-1-1",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1989,6 +1989,25 @@
         "b": 0,
         "g": 0,
         "r": 0
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "StageNumber",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Stage",
+      "font": "Fontes\\zorque\\zorque.ttf",
+      "characterSize": 30,
+      "color": {
+        "b": 128,
+        "g": 0,
+        "r": 128
       }
     }
   ],
@@ -3466,7 +3485,7 @@
                   "parameters": [
                     "TutorialText",
                     "=",
-                    "\"No momento você é apenas um desarmador iniciante mas, conforme for ganhando mais experiência, pode subir de cargo. Quem sabe você não vira o próximo Mestre do Desarmamento de Bombas do esquadrão? Tenho altas expectativas em você, recruta!\""
+                    "\"Após sua primeira missão, você será apenas um desarmador iniciante mas, conforme for ganhando mais experiência, pode subir de cargo. Quem sabe você não vira o próximo Mestre do Desarmamento de Bombas do esquadrão? Tenho altas expectativas em você, recruta!\""
                   ],
                   "subInstructions": []
                 }
@@ -7803,9 +7822,91 @@
                     "106"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StageNumber",
+                    "627",
+                    "26",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "actualTutorial",
+                        "<",
+                        "6"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "StageNumber",
+                        "=",
+                        "\"Treino \" + ToString(GlobalVariable(actualTutorial) + 1)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "actualTutorial",
+                        "<",
+                        "6"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "StageNumber",
+                        "=",
+                        "\"Fase \" + ToString(GlobalVariable(actualTutorial) -5)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -8094,7 +8195,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8599,7 +8700,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Dynamic Bomb",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8869,7 +8970,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Dynamic Bomb 2",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9132,14 +9233,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ]
     },
@@ -9219,6 +9312,29 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "OR",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "OR",
+                    "Bit",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9228,26 +9344,13 @@
                   },
                   "parameters": [
                     "",
-                    "OR",
-                    "LINE"
+                    "LINE",
+                    "OR"
                   ],
                   "subInstructions": []
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "ifelse",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "disabled": false,
@@ -9315,18 +9418,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "ifelse",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "ModVarObjet"
                           },
                           "parameters": [
@@ -9334,41 +9425,6 @@
                             "Bit",
                             "=",
                             "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "ifelse",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarObjet"
-                          },
-                          "parameters": [
-                            "OR",
-                            "Bit",
-                            "=",
-                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -9477,8 +9533,8 @@
                   },
                   "parameters": [
                     "",
-                    "OR",
-                    "LINE"
+                    "LINE",
+                    "OR"
                   ],
                   "subInstructions": []
                 }
@@ -10162,8 +10218,8 @@
               },
               "parameters": [
                 "",
-                "XOR",
-                "LINE"
+                "LINE",
+                "XOR"
               ],
               "subInstructions": []
             }
@@ -10308,7 +10364,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "XOR Gate",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10334,7 +10390,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -10344,8 +10400,8 @@
                   },
                   "parameters": [
                     "",
-                    "XOR",
-                    "LINE"
+                    "LINE",
+                    "XOR"
                   ],
                   "subInstructions": []
                 }
