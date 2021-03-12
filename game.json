@@ -2029,6 +2029,10 @@
     {
       "name": "cargo",
       "value": "Recruta"
+    },
+    {
+      "name": "promotion",
+      "value": "0"
     }
   ],
   "layouts": [
@@ -7041,8 +7045,8 @@
           "name": "CutsCounter",
           "persistentUuid": "a7fdda21-b4e3-45d0-86ef-d576b099e55d",
           "width": 0,
-          "x": 187,
-          "y": 66,
+          "x": 206,
+          "y": 106,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -7139,6 +7143,50 @@
             "includeConfig": 0
           },
           "target": "User"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "cargo",
+                "=",
+                "\"Iniciante\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "promotion",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -7470,21 +7518,78 @@
                 "\"250;180;62\""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "Speak",
-                "=",
-                "\"Parabéns, você conseguiu desarmar a bomba com sucesso! Você está cada vez mais próximo de se tornar um Mestre do desarmamento\""
-              ],
-              "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "promotion",
+                    "=",
+                    "1\n"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "Speak",
+                    "=",
+                    "\"Parabéns! Você foi promovido a \" + GlobalVariableString(cargo) + \"! Continue assim e logo você será o melhor do esquadrão.\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "promotion",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "Speak",
+                    "=",
+                    "\"Parabéns, você conseguiu desarmar a bomba com sucesso! Você está cada vez mais próximo de se tornar um Mestre do desarmamento\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -7682,6 +7787,20 @@
                   "parameters": [
                     "Fracasso",
                     "\"Fail Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "CutsCounter",
+                    "=",
+                    "206",
+                    "=",
+                    "106"
                   ],
                   "subInstructions": []
                 }
@@ -11320,7 +11439,7 @@
               "parameters": [
                 "",
                 "Cargo",
-                "95",
+                "80",
                 "30",
                 ""
               ],
