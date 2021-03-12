@@ -856,7 +856,12 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Bit",
+          "value": "0"
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -4981,7 +4986,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.7778
+        "zoomFactor": 0.9878
       },
       "objectsGroups": [],
       "variables": [],
@@ -6364,6 +6369,472 @@
               "width": 0
             }
           ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Swipe",
+          "type": "Swipe::Swipe"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Stage3",
+      "name": "Stage3",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.94
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "b4b6be5c-374b-463d-b052-2f0627b229ed",
+          "width": 198,
+          "x": 468,
+          "y": 298,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "0"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "95202cb0-a569-462c-8dd6-e32e4f07422e",
+          "width": 106,
+          "x": 195,
+          "y": 270,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "773a808e-4f8a-4f36-8ad9-5cfd7d7f60c8",
+          "width": 102,
+          "x": 34,
+          "y": 245,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "0f32e9ef-4a18-436c-a590-02e8b4bf94a4",
+          "width": 109,
+          "x": 27,
+          "y": 287,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": -90,
+          "customSize": true,
+          "height": 38,
+          "layer": "",
+          "locked": false,
+          "name": "Fonte",
+          "persistentUuid": "a880a3d1-85bc-4029-8fdb-6a44937e8db7",
+          "width": 122,
+          "x": -38,
+          "y": 267,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "052fd08f-46bc-4298-900e-c91d9c0ba52c",
+          "width": 290,
+          "x": 16,
+          "y": 325,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Fail Layer",
+          "locked": false,
+          "name": "Fracasso",
+          "persistentUuid": "c7447cf7-13a7-42ea-978a-58ff7756eb9c",
+          "width": 0,
+          "x": 302,
+          "y": 260,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Text Layer",
+          "locked": false,
+          "name": "Sucesso",
+          "persistentUuid": "95c7e6db-8cc9-4a3e-ad03-1e7512580da8",
+          "width": 0,
+          "x": 315,
+          "y": 261,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "CutsCounter",
+          "persistentUuid": "a7fdda21-b4e3-45d0-86ef-d576b099e55d",
+          "width": 0,
+          "x": 211,
+          "y": 90,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 114,
+          "layer": "",
+          "locked": false,
+          "name": "BombTrig2",
+          "persistentUuid": "a73e4edd-14cc-4537-a14b-b3569eef28e8",
+          "width": 113,
+          "x": 609,
+          "y": 245,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "NOT",
+          "persistentUuid": "4d33d6b7-3a95-4ea7-b986-1e6a16448fc0",
+          "width": 0,
+          "x": 426,
+          "y": 275,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 107,
+          "layer": "",
+          "locked": false,
+          "name": "OR",
+          "persistentUuid": "d7c7f2d6-cce5-4090-8a5d-81a005b82e4f",
+          "width": 81,
+          "x": 277,
+          "y": 253,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 17,
+          "layer": "",
+          "locked": false,
+          "name": "LINE",
+          "persistentUuid": "13c287d6-9fda-4b1a-8a7d-5d2bb930fb4b",
+          "width": 98,
+          "x": 344,
+          "y": 300,
+          "zOrder": 1,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Bit",
+              "value": "1"
+            },
+            {
+              "name": "Cuttable",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 90,
+          "layer": "",
+          "locked": false,
+          "name": "AND",
+          "persistentUuid": "8fbc5936-7089-41b9-b2fa-6321c4de294b",
+          "width": 76,
+          "x": 125,
+          "y": 231,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "startingCuts",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nextStage",
+                "=",
+                "\"Stage3\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "NOT Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Stage Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "And Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "OR Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "User"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Lose Rules"
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 649296,
+          "ambientLightColorG": 1214,
+          "ambientLightColorR": 7155816,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 6009760,
+          "ambientLightColorR": 33554432,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Text Layer",
+          "visibility": false,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 1954047360,
+          "ambientLightColorR": 33554432,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Game Layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fail Layer",
+          "visibility": false,
+          "cameras": [],
           "effects": []
         }
       ],
@@ -11055,7 +11526,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -11122,26 +11593,13 @@
                   },
                   "parameters": [
                     "",
-                    "NOT",
-                    "LINE"
+                    "LINE",
+                    "NOT"
                   ],
                   "subInstructions": []
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "ifelse",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "disabled": false,
@@ -11209,18 +11667,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "ifelse",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "ModVarObjet"
                           },
                           "parameters": [
@@ -11242,12 +11688,13 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "VarGlobal"
+                            "value": "VarObjet"
                           },
                           "parameters": [
-                            "ifelse",
+                            "LINE",
+                            "Bit",
                             "=",
-                            "0"
+                            "1"
                           ],
                           "subInstructions": []
                         }
@@ -11286,41 +11733,6 @@
           "name": "Set Out",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
-          "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "LinkedObjects::PickObjectsLinkedTo"
-              },
-              "parameters": [
-                "",
-                "NOT",
-                "LINE"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "ifelse",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
           "events": [
             {
               "disabled": false,
@@ -11330,37 +11742,14 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
                   },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "LINE",
-                        ">",
-                        "NOT.X()"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "NOT",
-                        "LINE",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
+                  "parameters": [
+                    "",
+                    "LINE",
+                    "NOT"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [],
@@ -11373,73 +11762,119 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "VarObjet"
+                        "value": "BuiltinCommonInstructions::And"
                       },
-                      "parameters": [
-                        "NOT",
-                        "Bit",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "LINE",
+                            ">=",
+                            "NOT.X()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NOT",
+                            "LINE",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "LINE",
-                        "Bit",
-                        "=",
-                        "1"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "NOT",
+                            "Bit",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "LINE",
+                            "Bit",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "NOT",
-                        "Bit",
-                        "=",
-                        "0\n"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "NOT",
+                            "Bit",
+                            "=",
+                            "0\n"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "LINE",
-                        "Bit",
-                        "=",
-                        "0"
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "LINE",
+                            "Bit",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "events": []
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "disabled": false,
