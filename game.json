@@ -6719,7 +6719,7 @@
               "parameters": [
                 "nextStage",
                 "=",
-                "\"Stage3\""
+                "\"Stage4\""
               ],
               "subInstructions": []
             }
@@ -6779,6 +6779,50 @@
             "includeConfig": 0
           },
           "target": "Lose Rules"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "cargo",
+                "=",
+                "\"Experiente\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "promotion",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -7767,7 +7811,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.79
+        "zoomFactor": 0.67
       },
       "objectsGroups": [],
       "variables": [],
@@ -7851,18 +7895,41 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Menu",
+          "persistentUuid": "bda75e73-3640-4a0a-ad06-a4693378653c",
+          "width": 0,
+          "x": 466,
+          "y": 519,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "MenuText",
+          "persistentUuid": "85b0297a-1434-4aa5-aa39-a64f84d5267f",
+          "width": 0,
+          "x": 487,
+          "y": 531,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "name": "NewObject",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": []
-        },
         {
           "bold": false,
           "italic": false,
@@ -7901,6 +7968,45 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\bubble-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Menu",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Startbutton",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Startbutton-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7963,6 +8069,25 @@
         {
           "bold": false,
           "italic": false,
+          "name": "MenuText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Menu",
+          "font": "Fontes\\zorque\\zorque.ttf",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
           "name": "ContinueText",
           "smoothed": true,
           "tags": "",
@@ -8018,6 +8143,40 @@
               "conditions": [
                 {
                   "type": {
+                    "inverted": true,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "promotion",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "Speak",
+                    "=",
+                    "\"Parabéns, você conseguiu desarmar a bomba com sucesso! Você está cada vez mais próximo de se tornar um Mestre do desarmamento\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
                     "inverted": false,
                     "value": "VarGlobal"
                   },
@@ -8041,6 +8200,18 @@
                     "\"Parabéns! Você foi promovido a \" + GlobalVariableString(cargo) + \"! Continue assim e logo você será o melhor do esquadrão.\""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "promotion",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -8052,13 +8223,13 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "VarGlobal"
+                    "inverted": false,
+                    "value": "VarGlobalTxt"
                   },
                   "parameters": [
-                    "promotion",
+                    "nextStage",
                     "=",
-                    "1"
+                    "\"Stage4\""
                   ],
                   "subInstructions": []
                 }
@@ -8072,7 +8243,7 @@
                   "parameters": [
                     "Speak",
                     "=",
-                    "\"Parabéns, você conseguiu desarmar a bomba com sucesso! Você está cada vez mais próximo de se tornar um Mestre do desarmamento\""
+                    "\"Obrigado por jogar o jogo! Em breve teremos mais fases e você poderá atingir o cargo de Mestre!\""
                   ],
                   "subInstructions": []
                 }
@@ -8145,6 +8316,70 @@
               "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Menu",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Main Menu\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ],
       "layers": [
@@ -11958,7 +12193,7 @@
               "parameters": [
                 "UserBack",
                 "=",
-                "209"
+                "230"
               ],
               "subInstructions": []
             },
